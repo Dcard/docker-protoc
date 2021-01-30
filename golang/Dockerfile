@@ -7,3 +7,4 @@ RUN echo "Host github.com\n\tStrictHostKeyChecking no\n\tControlMaster auto\n\tC
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
 ENV SSH_PRIVATE_KEY ""
+ENV GOPRIVATE "github.com/Dcard/*"
