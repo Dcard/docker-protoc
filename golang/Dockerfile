@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM golang:1.15.7
+FROM golang:1.15.7
 ARG ARCH=
 ADD protoc-3.14.0-linux-${ARCH}.tar.gz /usr
 RUN git config --global url."ssh://git@github.com/".insteadOf "https://github.com/"
