@@ -2,12 +2,12 @@
 
 export DOCKER_BUILDKIT=1
 
-TAG="dcard/protoc:3.19.4-golang-1.18.0"
+TAG="dcard/protoc:3.21.9-golang-1.19.3"
 
-[[ -f protoc-3.19.4-linux-aarch_64.zip ]] || curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v3.19.4/protoc-3.19.4-linux-aarch_64.zip
-[[ -f protoc-3.19.4-linux-x86_64.zip ]] || curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v3.19.4/protoc-3.19.4-linux-x86_64.zip
-mkdir -p linux/arm64 && unzip -o -d linux/arm64 protoc-3.19.4-linux-aarch_64
-mkdir -p linux/amd64 && unzip -o -d linux/amd64 protoc-3.19.4-linux-x86_64
+[[ -f protoc-21.9-linux-aarch_64.zip ]] || curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v21.9/protoc-21.9-linux-aarch_64.zip
+[[ -f protoc-21.9-linux-x86_64.zip ]] || curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v21.9/protoc-21.9-linux-x86_64.zip
+mkdir -p linux/arm64 && unzip -o -d linux/arm64 protoc-21.9-linux-aarch_64
+mkdir -p linux/amd64 && unzip -o -d linux/amd64 protoc-21.9-linux-x86_64.zip86_64
 
 docker buildx build --push --platform=linux/amd64,linux/arm64 -t $TAG .
 
