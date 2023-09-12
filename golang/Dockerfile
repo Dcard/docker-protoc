@@ -1,4 +1,4 @@
-FROM --platform=$TARGETPLATFORM golang:1.20.4
+FROM --platform=$TARGETPLATFORM golang:1.21.1
 ARG TARGETPLATFORM
 COPY ./$TARGETPLATFORM /usr
 RUN git config --global url."ssh://git@github.com/".insteadOf "https://github.com/"
