@@ -1,4 +1,4 @@
-FROM --platform=$TARGETPLATFORM golang:1.23.1-bookworm
+FROM --platform=$TARGETPLATFORM golang:1.24.1-bookworm
 ARG TARGETPLATFORM
 COPY ./$TARGETPLATFORM /usr
 RUN git config --global url."ssh://git@github.com/".insteadOf "https://github.com/"

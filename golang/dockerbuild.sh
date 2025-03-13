@@ -2,7 +2,7 @@
 
 export DOCKER_BUILDKIT=1
 
-TAG="dcard/protoc:3.21.9-golang-1.23.1"
+TAG="dcard/protoc:3.21.9-golang-1.24.1"
 
 [[ -f protoc-21.9-linux-aarch_64.zip ]] || curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v21.9/protoc-21.9-linux-aarch_64.zip
 [[ -f protoc-21.9-linux-x86_64.zip ]] || curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v21.9/protoc-21.9-linux-x86_64.zip
